@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
-const StringDecoder = require('string_decoder').StringDecoder;
 
 let counties = {
     Lofa: "voinjama",
@@ -10,16 +9,15 @@ let counties = {
     Bomi: "Tubmanburg",
     GrandKru: "Barclayville",
     Gbapolu: "Bopolu",
-    GrandGedeh: "Tubmanburg",
-    GrandCapeMount: "Robertsport",
-    Maryland: "Harper",
+    GrandGedeh: "Zwerdu",
+    Margibi: "Kakata",
     Montserrado: "Bensonville",
+    Maryland: "Harper",
+    Sinoe: "Buchana",
     RiverCess: "Cestos City",
     RiverGee: "Fish Town",
-    Margibi: "Kakata",
-    Nimba: "Sanniquellie",
-    Sinoe: "Buchana"
-}
+    Nimba: "Sanniquellie"
+};
 
 app.get('/', (req, res) => {
     res.send("Hello World");
@@ -27,9 +25,12 @@ app.get('/', (req, res) => {
 app.get('/counties', (req, res) => {
     res.send(counties);
 });
+
 app.get('/counties/:capital', (req, res) => {
-    let capital = Object.values(counties);
-    app.send(capital);
-})
+    const province = req.params.capital;
+    res.send(counties[province]);
+});
+
+
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => console.log(`Listening on port ${port}`));
