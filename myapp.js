@@ -3,20 +3,20 @@ const app = express();
 app.use(express.json());
 
 let counties = {
-    Lofa: "voinjama",
-    GrandBassa: "Buchana",
-    Bong: "Gbarnga",
-    Bomi: "Tubmanburg",
-    GrandKru: "Barclayville",
-    Gbapolu: "Bopolu",
-    GrandGedeh: "Zwerdu",
-    Margibi: "Kakata",
-    Montserrado: "Bensonville",
-    Maryland: "Harper",
-    Sinoe: "Buchana",
-    RiverCess: "Cestos City",
-    RiverGee: "Fish Town",
-    Nimba: "Sanniquellie"
+    "Lofa": "voinjama",
+    "GrandBassa": "Buchana",
+    "Bong": "Gbarnga",
+    "Bomi": "Tubmanburg",
+    "GrandKru": "Barclayville",
+    "Gbapolu": "Bopolu",
+    "GrandGedeh": "Zwerdu",
+    "Margibi": "Kakata",
+    "Montserrado": "Bensonville",
+    "Maryland": "Harper",
+    "Sinoe": "Buchana",
+    "RiverCess": "Cestos City",
+    "RiverGee": "Fish Town",
+    "Nimba": "Sanniquellie"
 };
 
 app.get('/', (req, res) => {
