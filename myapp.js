@@ -1,36 +1,58 @@
 const express = require('express');
+const fs = require('fs');
 const app = express();
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+);
 app.use(express.json());
+app.use(express.static("public "))
+let path = require('path')
 
 let counties = {
     "Lofa": "voinjama",
-    "GrandBassa": "Buchana",
+    "Grand Bassa": "Buchana",
     "Bong": "Gbarnga",
     "Bomi": "Tubmanburg",
-    "GrandKru": "Barclayville",
+    "Grand Kru": "Barclayville",
     "Gbapolu": "Bopolu",
-    "GrandGedeh": "Zwerdu",
+    "Grand Gedeh": "Zwerdu",
     "Margibi": "Kakata",
     "Montserrado": "Bensonville",
     "Maryland": "Harper",
     "Sinoe": "Buchana",
-    "RiverCess": "Cestos City",
-    "RiverGee": "Fish Town",
+    "River Cess": "Cestos City",
+    "River Gee": "Fish Town",
     "Nimba": "Sanniquellie"
 };
 
 app.get('/', (req, res) => {
-    res.send("Hello World");
+    res.sendFile(path.join(__dirname + "/home.html"));
 });
+app.post('submit', function(req, res) {
+    console.log(req.body)
+})
 app.get('/counties', (req, res) => {
     res.send(counties);
+    // fs.readFile("/county-capital.json", "utf8", (err, data) => {
+    //     let
+    // })
+    // res.sendFile(path.join(__dirname + "/index.html"));
+
 });
 
-app.get('/counties/:capital', (req, res) => {
-    const province = req.params.capital;
-    res.send(counties[province]);
+app.get('/counties/:countyCapital', (req, res) => {
+    const Capital = req.params.countyCapital;
+    res.send(counties[Capital]);
+    console.log(req.body)
 });
+app.get('/counties/create/:newcounty', (req, res) => {
+    const county = req.params.newcounty;
+    // counties.push(county);
+    res.send({ county });
+    console.log("See new county", { county })
+})
 
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3900;
 app.listen(port, () => console.log(`Listening on port ${port}`));
