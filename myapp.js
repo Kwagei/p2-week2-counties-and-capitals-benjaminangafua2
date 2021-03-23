@@ -28,7 +28,7 @@ let counties = {
 };
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + "/home.html"));
+    res.send('HELLO WORLD');
 });
 
 app.get('/counties', (req, res) => {
@@ -47,17 +47,14 @@ app.get('/counties', (req, res) => {
 
 app.get('/counties/capital/:Capital', (req, res) => {
     const capital = req.params.Capital;
-    res.send(`Capital:${counties[capital]}`);
-    console.log(counties[capital])
+    res.send(`Capital: ${counties[capital]}`);
 
     // res.sendFile(path.join(__dirname + "/capital.html"));
 
 });
-app.get('/create/county/:county/names/:capital', (req, res) => {
-    console.log('Data::::::::::::>>>>>>>>>>', req.params)
-    let county = req.params
-    res.send(county);
-    console.log("The newly created county is", county)
+app.get('/create/county/:county.:capital', (req, res) => {
+    res.send(JSON.stringify(req.params));
+    console.log("The newly created county is", req.params)
 
     // res.sendFile(path.join(__dirname + "/create-county.html"));
 
@@ -65,10 +62,6 @@ app.get('/create/county/:county/names/:capital', (req, res) => {
     // res.send({ county: capital });
     // console.log("See new county", { county: capital })
 })
-app.post('/create/county', (req, res) => {
-    let new_county = req.body
-    console.log('What is this', new_county)
-})
 
-const port = process.env.PORT || 3900;
+const port = process.env.PORT || 3550;
 app.listen(port, () => console.log(`Listening on port ${port}`));
