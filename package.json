@@ -1,19 +1,20 @@
 {
-  "name": "p2-week2-counties-and-capitals-benjaminangafua2",
-  "version": "1.0.0",
-  "description": "* This is an API project built in Node JS. The project has three endpoints, one that returns all the counties and their capitals in Liberia, one that returns the capital city for the county that was passed and one where user can send the name of a county and its capital to be stored.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2/issues"
-  },
-  "homepage": "https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2#readme"
+    "name": "p2-week2-counties-and-capitals-benjaminangafua2",
+    "version": "1.0.0",
+    "description": "* This is an API project built in Node JS. The project has three endpoints, one that returns all the counties and their capitals in Liberia, one that returns the capital city for the county that was passed and one where user can send the name of a county and its capital to be stored.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2/issues"
+    },
+    "homepage": "https://github.com/Kwagei/p2-week2-counties-and-capitals-benjaminangafua2#readme"
 }

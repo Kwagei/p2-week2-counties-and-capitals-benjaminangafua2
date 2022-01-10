@@ -15,16 +15,97 @@
 
 <body>
 
+    <form action="/create-county" method="post">
+        <div style="text-align: center;">
+            <h1>Create A County</h1>
+            <label for="county-name">County</label>
+            <input type="text" name="county-name" id="county-name"> <br><br>
+
+            <label for="capital">Capital</label>
+            <input type="text" name="capital" id="capital">
+            <button type="submit">Create County</button>
+            <a href="/counties">See Counties</a>
+        </div>
+    </form>
+
+    <!-- <input type="text" name="" id="new-county">
 
 
-    <input type="text" name="" id="new-county">
     <script>
         fetch('/')
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
             });
-    </script>
+
+        // Read all
+        function getStudents() {
+            for (var i = 0; i < students.length; i++) {
+                console.log(students[i]);
+
+            }
+        }
+
+        // getStudents()
+
+
+        function addStudent() {
+            var student = {
+                name: "name",
+                age: 100,
+                eyeColor: 'green',
+                occupation: 'driver'
+            }
+            students.push(student);
+        }
+
+        const students = [{
+                name: "Boakai Kamara",
+                age: 55,
+                eyeColor: "blue",
+                occupation: "Student"
+            }, {
+                name: "James Gaye",
+                age: 55,
+                eyeColor: "yellow",
+                occupation: "Car loader"
+            }, {
+                name: "Albin Karmo",
+                age: 55,
+                eyeColor: "yellow",
+                occupation: "Shoe shine boy"
+            }
+
+        ]
+
+        function findStudent(name) { // name = "Carlos Nah"
+            // var x = joseph;
+            for (let i = 0; i < students.length; i++) { // i = 2, students.length = 3;
+                // console.log(name)
+                if (students[i].name === name) { // students[i].name = "Albin Karmo", i = 2, name = "Albin Karmo"
+                    console.log(students[i]);
+                    break;
+                } else {
+                    if (i === students.length - 1) { // i = 2, students.length = 3
+                        console.log("Name not found")
+                    }
+
+                    // return console.log("Name not found");
+                }
+            }
+
+            // if(x === )
+
+        }
+
+        //console.log("1: ", students);
+
+        //addStudent()
+
+        //console.log("2: ", students);
+
+        findStudent("James mGaye");
+    </script> -->
 </body>
 
 </html>

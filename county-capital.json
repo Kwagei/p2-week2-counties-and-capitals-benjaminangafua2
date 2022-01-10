@@ -1,16 +1,17 @@
-{
-    "Lofa": "voinjama",
-    "Grand Bassa": "Buchana",
-    "Bong": "Gbarnga",
-    "Bomi": "Tubmanburg",
-    "Grand Kru": "Barclayville",
-    "Gbapolu": "Bopolu",
-    "Grand Gedeh": "Zwerdu",
-    "Margibi": "Kakata",
-    "Montserrado": "Bensonville",
-    "Maryland": "Harper",
-    "Sinoe": "Buchana",
-    "River Cess": "Cestos City",
-    "River Gee": "Fish Town",
-    "Nimba": "Sanniquellie"
-}
+[
+    { "name": "Lofa", "capital": "voinjama" },
+    { "name": "Grand Bassa", "capital": "Buchana" },
+    { "name": "Bong", "capital": "Gbarnga" },
+    { "name": "Bomi", "capital": "Tubmanburg" },
+    { "name": "Grand Kru", "capital": "Barclayville" },
+    { "name": "Gbapolu", "capital": "Bopolu" },
+    { "name": "Grand Gedeh", "capital": "Zwerdu" },
+    { "name": "Margibi", "capital": "Kakata" },
+    { "name": "Montserrado", "capital": "Bensonville" },
+    { "name": "Maryland", "capital": "Harper" },
+    { "name": "Sinoe", "capital": "Buchana" },
+    { "name": "River Cess", "capital": "Cestos City" },
+    { "name": "River Gee", "capital": "Fishtown" },
+    { "name": "Nimba", "capital": "Sanniquellie" },
+    { "name": "Lofa", "capital": "voinjama" }
+]
